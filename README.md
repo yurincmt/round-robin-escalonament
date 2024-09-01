@@ -23,10 +23,9 @@ Essas são as propriedades que cada processo terá e que serão utilizadas pelo 
 
 ## Construção (build) e Teste
 
-Para compilar os arquivos do projeto, instale as dependências com o `./install_dependencies.sh` (não esqueça de dar permissão de execução).
+Para compilar os arquivos do projeto, instale as dependências:
 ```
-sudo chmod u+x install_dependencies.sh
-./install_dependencies.sh
+sudo apt install build-essential
 ```
 
 Para fazer o build dos arquivos, execute o `make build` a partir do diretório raiz do projeto:
@@ -54,16 +53,16 @@ Para ter uma ideia de como é a entrada que o executável espera receber, veja o
 
 ## Estrutura do Projeto
 ```
-├── bin
-│   └── exec
+.
 ├── data
-│   └── example.txt
+│   └── example.txt
 ├── Makefile
 ├── README.md
+├── roundrobin
 └── src
-    ├── lib_priorityQueue.c
-    ├── lib_processQueue.c
     ├── main.c
-    ├── priorityQueue_header.h
-    └── processQueue_header.h
+    ├── priorityQueue.c
+    ├── priorityQueue.h
+    ├── processQueue.c
+    └── processQueue.h
 ```
