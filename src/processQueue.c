@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "processQueue_header.h"
+#include "processQueue.h"
 
 
 struct elemento {	// Elemento da fila; contém um processo e o próximo elemto, na fila

@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include "priorityQueue_header.h"
-#include "processQueue_header.h"
+#include "priorityQueue.h"
+#include "processQueue.h"
 
 
 struct priority_queue{

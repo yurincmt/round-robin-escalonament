@@ -1,6 +1,6 @@
 #ifndef FILA_DE_PROCESSOS_COM_PRIORIDADES
 #define FILA_DE_PROCESSOS_COM_PRIORIDADES
-#include "processQueue_header.h"
+#include "processQueue.h"
 
 typedef struct priority_queue Pqueue;
 

@@ -28,8 +28,8 @@
 #include <unistd.h>
 #include <pthread.h>
 #include <time.h>
-#include "processQueue_header.h"
-#include "priorityQueue_header.h"
+#include "processQueue.h"
+#include "priorityQueue.h"
 
 #define PROCESS_QTY 15
 
