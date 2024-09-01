@@ -31,3 +31,7 @@ roundrobin: $(OBJ)
 test: ./data/example.txt
 	./roundrobin < ./data/example.txt
 
+
+clean:
+	rm -rf roundrobin
+	rm -rf $(OBJ)
