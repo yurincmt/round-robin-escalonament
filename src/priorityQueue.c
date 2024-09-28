@@ -103,10 +103,11 @@ void priorityQueue_algorithm(Pqueue *pq) {
 unsigned int round_robin(Pqueue *pq, Fila* fila) {
 	/**
 	 * A cada processo é designado um intervalo, chamado de seu quantum, durante o qual ele é deixado
-	 * executar. Se o processo ainda está executando ao fim do quantum, a CPU sofrerá uma preempção e
-	 * receberá outro processo.
+	 * executar. Se o processo ainda está executando ao fim do quantum, a CPU sofrerá uma preempção
+	 * para executar outro processo.
 	 * 
-	 * Quando o processo usa todo o seu quantum, ele é colocado no fim da fila.
+	 * Quando o processo usa todo o seu quantum, ele é colocado no fim da fila para aguardar ser
+	 * executado novamente.
 	 * 
 	 * OBS: Na prática, conforme os processos estão no estado de PRONTO para serem executados, eles são colocados no final
 	 * da fila, para aguardarem o momento de sua execução. Não consegui implementar essa chegada de processos
