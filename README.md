@@ -9,60 +9,66 @@ O Round Robin é um algoritmo de escalonamento preemptivo, o que significa que e
 
 Implementação do algoritmo de escalonamento de processos Round Robin, utilizando filas circulares de prioridade.
 
-Os algoritmos principais que implementam a Fila de Prioridade e Round Robin, bem como suas explicações, estão no arquivo `src/lib_priorityQueue.c`.
+Os algoritmos principais que implementam a Fila de Prioridade e Round Robin, bem como suas explicações, estão no arquivo `src/priorityQueue.c`.
 
 A estrutura de cada processo, ou Bloco de Controle de Processo, dá-se da seguinte forma:
-```
-+ nome
-+ pid
-+ prioridade
-+ quantum
-+ tempo de execução
-```
+
+    + nome              -> nome do processo
+    + pid               -> process id
+    + prioridade        -> a fila prioritária que o processo se encontra
+    + quantum           -> parcela de tempo que a CPU deve dedicar para o processo
+    + tempo de execução -> tempo total de execução do processo
+
+
 Essas são as propriedades que cada processo terá e que serão utilizadas pelo o algoritmo de escalonamento.
 
-## Construção (build) e Teste
+## Experimente em sua Máquina
 
 Para compilar os arquivos do projeto, instale as dependências:
-```
-sudo apt install build-essential
-```
 
-Para fazer o build dos arquivos, execute o `make build` a partir do diretório raiz do projeto:
-```
-make build
-```
+    sudo apt install build-essential
 
-Para ver como a implementação se comporta, execute o teste:
-```
-make test
-```
+> Os comando make devem ser executado no diretório raiz do projeto (onde o arquivo Makefile se encontra).
+
+#### Compilar a Aplicação
+
+    make build
+
+
+#### Execute Algunas Testes
+
+Para ver como a implementação se comporta, experimente um exemplo que se encontra no arquivo `data/example.txt`.
+
+    make test
+
+    ## Ou
+	./roundrobin < ./data/example.txt
+
 
 A presente implementação executa uma quantidade de PROCESS_QTY processos. Essa quantidade pode ser alterada no arquivo `main.c`.
 
-O executável espera receber PROCESS_QTY processo, sendo que cada prioridade de cada processo será lida na seguinte ordem:
-```
-+ nome
-+ pid
-+ prioridade
-+ quantum
-+ tempo de execução
-```
+O executável espera receber PROCESS_QTY processo, sendo que cada propriedade de cada processo será lida na seguinte ordem:
+
+    + nome
+    + pid
+    + prioridade
+    + quantum
+    + tempo de execução
+
 Para ter uma ideia de como é a entrada que o executável espera receber, veja o arquivo `data/example.txt`.
 
 
 ## Estrutura do Projeto
-```
-.
-├── data
-│   └── example.txt
-├── Makefile
-├── README.md
-├── roundrobin
-└── src
-    ├── main.c
-    ├── priorityQueue.c
-    ├── priorityQueue.h
-    ├── processQueue.c
-    └── processQueue.h
-```
+
+    .
+    ├── data
+    │   └── example.txt
+    ├── Makefile
+    ├── README.md
+    ├── roundrobin
+    └── src
+        ├── main.c
+        ├── priorityQueue.c
+        ├── priorityQueue.h
+        ├── processQueue.c
+        └── processQueue.h
