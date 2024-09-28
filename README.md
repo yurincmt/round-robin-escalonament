@@ -22,6 +22,15 @@ A estrutura de cada processo, ou Bloco de Controle de Processo, dá-se da seguin
 
 Essas são as propriedades que cada processo terá e que serão utilizadas pelo o algoritmo de escalonamento.
 
+## Round Robin em Ação!
+
+No video a seguir, cada processo é mostrado da seguinte forma:
+
+ 	[ X:Y ]  tal que X = "Nome do processo" , Y = "Tempo de execução restante do processo".
+
+[emacao.webm](https://github.com/user-attachments/assets/34bba0dc-3d37-48b0-b17a-da42d7527c4f)
+
+
 ## Experimente em sua Máquina
 
 Para compilar os arquivos do projeto, instale as dependências:
